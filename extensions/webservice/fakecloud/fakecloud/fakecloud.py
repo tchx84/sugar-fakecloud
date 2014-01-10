@@ -21,18 +21,18 @@ _current_id = 0
 
 
 def upload(data, title, activity_id):
-        global _index, _data, _current_id
+    global _index, _data, _current_id
 
-        properties = {}
-        properties['id'] = _current_id
-        properties['title'] = title
-        properties['activity_id'] = activity_id
+    properties = {}
+    properties['id'] = _current_id
+    properties['title'] = title
+    properties['activity_id'] = activity_id
 
-        _index[_current_id] = properties
-        _data[_current_id] = data
+    _index[_current_id] = properties
+    _data[_current_id] = data
 
-        _current_id += 1
-        return (_current_id - 1)
+    _current_id += 1
+    return (_current_id - 1)
 
 
 def download(id):
